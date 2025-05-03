@@ -59,11 +59,13 @@
 
 <body class="min-h-screen">
     <!-- Header/Navigation -->
-    <header class="py-2 px-4 bg-white pl-16 pr-16">
+    <header class="py-2 px-6 mmd:px-12 bg-white" style="background: linear-gradient(45deg, #8B5CF6, #EC4899);"> 
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="logo__.png" alt="logo_jund" class="h-10 w-10">
-                <h1 class="ml-2 text-2xl font-bold text-black">The Jhund</h1>
+                <div class="bg-white rounded-full p-2 inline-flex items-center justify-center">
+                    <img src="logo__.png" alt="logo_jund" class="h-10 w-10">
+                  </div>
+                <h1 class="ml-2 text-2xl font-bold text-gary-50">Jhund</h1>
             </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
@@ -87,8 +89,8 @@
 
             <!-- Left: App Preview -->
             <div class="md:w-1/2">
-                <img src="placeholder.png" alt="Jhund App Preview"
-                    class="rounded-xl shadow-2xl w-full max-w-md mx-auto md:mx-0 transform scale-x-[-1]" />
+                <img id="jhundImage" src="placeholder.png" alt="Jhund App Preview"
+                    class=" w-full max-w-md mx-auto md:mx-0 transform scale-x-[-1] transition-opacity duration-400 opacity-100" />
 
             </div>
 
@@ -99,8 +101,8 @@
                     Now Live on App Store & Play Store
                 </span>
 
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-                    Form Your <span class="text-purple-400">Jhund</span><br />
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+                    Form Your <span class="gradient-text">Jhund</span><br />
                     Build Creative Projects Together
                 </h1>
 
@@ -405,15 +407,17 @@
           
           <!-- Logo and Description -->
           <div>
-            <img src="logo__.png" alt="logo_jund" class="h-10 w-10">
-            <h2 class="text-2xl font-bold mb-2">Thejhund</h2>
-            <p class="text-gray-300 text-sm">Connecting musicians to form bands. Discover your sound, build your crew, and make music happen.</p>
+            <div class="bg-white rounded-full p-2 inline-flex items-center justify-center">
+                <img src="logo__.png" alt="logo_jund" class="h-10 w-10">
+              </div>
+            <h2 class="text-2xl font-bold mb-2">Jhund</h2>
+            <p class="text-gray-300 text-xs mt-2">Connecting musicians to form bands. Discover your sound, build your crew, and make music happen.</p>
           </div>
       
           <!-- Quick Links -->
           <div>
-            <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
-            <ul class="space-y-1 text-gray-300 text-sm">
+            <h3 class="text-sm font-semibold mb-2">Quick Links</h3>
+            <ul class="space-y-1 text-gray-300 text-xs">
               <li><a href="#" class="hover:text-white transition">Home</a></li>
               <li><a href="#" class="hover:text-white transition">Features</a></li>
               <li><a href="#" class="hover:text-white transition">Bands</a></li>
@@ -423,8 +427,8 @@
       
           <!-- Social Links -->
           <div>
-            <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
-            <div class="flex space-x-4">
+            <h3 class="text-sm font-semibold mb-2">Follow Us</h3>
+            <div class="flex space-x-4 ">
               <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i> Instagram</a>
               <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i> Twitter</a>
             </div>
@@ -432,7 +436,7 @@
       
           <!-- App Download Buttons -->
           <div>
-            <h3 class="text-lg font-semibold mb-3">Get the App</h3>
+            <h3 class="text-sm font-semibold mb-3">Get the App</h3>
             <div class="flex flex-wrap gap-3">
               <!-- Reuse your store buttons here -->
               <a href="#"
@@ -465,7 +469,33 @@
       </footer>
       
     
-
+      <script>
+        const images = [
+          "placeholder.png",
+          "loading-left.png",
+          "placeholder-grp-incliend.png",
+          "marketplace-left.png",
+          "inbox-left.png"
+        ];
+      
+        let current = 0;
+        const imageElement = document.getElementById("jhundImage");
+      
+        setInterval(() => {
+          // Fade out
+          imageElement.classList.remove("opacity-100");
+          imageElement.classList.add("opacity-0");
+      
+          // After fade out, switch image and fade in
+          setTimeout(() => {
+            current = (current + 1) % images.length;
+            imageElement.src = images[current];
+            imageElement.classList.remove("opacity-0");
+            imageElement.classList.add("opacity-100");
+          }, 400); // Match Tailwind's duration-700 (700ms)
+        }, 3000); // Change every 3 seconds
+      </script>
+      
 
 
 
