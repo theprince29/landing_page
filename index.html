@@ -352,54 +352,40 @@
 
 
 
-    <section id="pricing" class="py-20 px-6 md:px-12 bg-gray-950 text-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-12">Pricing Plans</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Free Plan -->
-                <div class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Free Plan</h3>
-                    <p class="text-lg mb-4 text-gray-300">Perfect for solo musicians or hobbyists starting out.</p>
-                    <span class="block text-3xl font-bold mb-6">$0<span class="text-base font-medium">/month</span></span>
-                    <ul class="text-left text-gray-400 space-y-3 mb-6">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Find Bandmates</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Basic Collaboration Tools</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Share Projects</li>
-                    </ul>
-                    <button class="btn-primary text-white px-6 py-3 rounded-full transition">Get Started</button>
-                </div>
-    
-                <!-- Pro Plan (Highlighted) -->
-                <div class="relative pricing-card  p-8 rounded-3xl shadow-2xl transform hover:scale-105 transition duration-300 border-4 border-purple-400" style="background: linear-gradient(45deg, #8B5CF6, #EC4899);">
-                    <div class="absolute -top-4 right-4 bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full shadow-md">Most Popular</div>
-                    <h3 class="text-2xl font-bold mb-3">Pro Plan</h3>
-                    <p class="text-lg mb-4 text-gray-100">Advanced tools for serious musicians & bands with priority support.</p>
-                    <span class="block text-3xl font-bold mb-6">$15<span class="text-base font-medium">/month</span></span>
-                    <ul class="text-left text-white space-y-3 mb-6">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-200 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Advanced Collaboration Tools</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-200 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Custom Project Management</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-200 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Unlimited Bandmate Matches</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-200 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Priority Support</li>
-                    </ul>
-                    <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">Get Started</button>
-                </div>
-    
-                <!-- Premium Plan -->
-                <div class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Premium Plan</h3>
-                    <p class="text-lg mb-4 text-gray-300">Complete access for professional bands & music studios.</p>
-                    <span class="block text-3xl font-bold mb-6">$30<span class="text-base font-medium">/month</span></span>
-                    <ul class="text-left text-gray-400 space-y-3 mb-6">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>All Pro Plan Features</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Customizable Band Projects</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Enhanced Privacy Options</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Team Collaboration</li>
-                    </ul>
-                    <button class="btn-primary text-white px-6 py-3 rounded-full hover:bg-purple-400 transition">Get Started</button>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="pricing" class="py-20 px-6 md:px-12 bg-gray-950 text-white">
+  <div class="container mx-auto text-center max-w-4xl">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-12">Pricing Plans</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+      <!-- Free Plan -->
+      <div class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-bold mb-3">Free Plan</h3>
+        <p class="text-lg mb-4 text-gray-300">Perfect for solo artist or hobbyists starting out.</p>
+        <span class="block text-3xl font-bold mb-6">₹0<span class="text-base font-medium">/month</span></span>
+        <ul class="text-left text-gray-400 space-y-3 mb-6">
+          <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Free talent search</li>
+          <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Free listing upto 5 product in marketpalce</li>
+          <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Free group formation</li>
+        </ul>
+        <button class="btn-primary text-white px-6 py-3 rounded-full transition">Get Started</button>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
+        <h3 class="text-2xl font-bold mb-3">Premium Plan</h3>
+        <p class="text-lg mb-4 text-gray-300">Complete access for professional and bussinesses</p>
+        <span class="block text-3xl font-bold mb-6">₹99<span class="text-base font-medium">/month</span></span>
+        <ul class="text-left text-gray-400 space-y-3 mb-6">
+          <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Unlimited Product Listing</li>
+          <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>24 / 7 customer support </li>
+          <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>access to marketing tool pay as you go</li>
+          
+        </ul>
+        <button class="btn-primary text-white px-6 py-3 rounded-full hover:bg-purple-400 transition">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
     <footer class="bg-gray-900 bg-opacity-80 text-white py-10 px-6 mt-10 rounded-t-3xl shadow-inner">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           
