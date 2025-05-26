@@ -408,13 +408,34 @@
                             </svg>access to marketing tool pay as you go</li>
 
                     </ul>
-                    <button class="btn-primary text-white px-6 py-3 rounded-full hover:bg-purple-400 transition">Get
+                    <button onclick="openModal()"
+                        class="btn-primary text-white px-6 py-3 rounded-full hover:bg-purple-400 transition">Get
                         Started</button>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Modal -->
+    <div id="premiumModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-gray-800 rounded-xl p-6 w-full max-w-md text-gray-200 relative">
+            <button onclick="closeModal()"
+                class="absolute top-2 right-2 text-gray-200 hover:text-gray-300 text-2xl">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 ">Get Started with Premium</h2>
+            <form id="premiumForm" class="space-y-4">
+                <input type="text" name="name" placeholder="Name"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
+                    required>
+                <input type="email" name="email" placeholder="Email"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
+                    required>
+                <input type="tel" name="phone" placeholder="Phone"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
+                    required>
+                <button type="submit"
+                    class="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg">Submit</button>
+            </form>
+        </div>
+    </div>
     <footer class="bg-gray-900 bg-opacity-80 text-white py-10 px-6 mt-10 rounded-t-3xl shadow-inner">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
@@ -485,7 +506,7 @@
     </footer>
 
 
-    <script>
+    <!-- <script>
         const images = [
             "images/placeholder.png",
             "images/loading-left.png",
@@ -511,8 +532,69 @@
             }, 400); // Match Tailwind's duration-700 (700ms)
         }, 3000); // Change every 3 seconds
     </script>
+    <script>
+        function openModal() {
+            document.getElementById('premiumModal').classList.remove('hidden');
+        }
 
+        function closeModal() {
+            document.getElementById('premiumModal').classList.add('hidden');
+        }
 
+        document.getElementById('premiumForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Optional: handle the form data here (e.g., send to backend)
+            alert('Thank you for your interest! We will contact you soon.');
+            closeModal();
+            this.reset();
+        });
+    </script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Image slider logic
+            const images = [
+                "images/placeholder.png",
+                "images/loading-left.png",
+                "images/placeholder-grp-incliend.png",
+                "images/marketplace-left.png",
+                "images/inbox-left.png"
+            ];
+
+            let current = 0;
+            const imageElement = document.getElementById("jhundImage");
+
+            setInterval(() => {
+                imageElement.classList.remove("opacity-100");
+                imageElement.classList.add("opacity-0");
+
+                setTimeout(() => {
+                    current = (current + 1) % images.length;
+                    imageElement.src = images[current];
+                    imageElement.classList.remove("opacity-0");
+                    imageElement.classList.add("opacity-100");
+                }, 400);
+            }, 3000);
+
+            // Modal form submit
+            const form = document.getElementById('premiumForm');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your interest! We will contact you soon.');
+                closeModal();
+                form.reset();
+            });
+        });
+
+        // Modal control functions
+        function openModal() {
+            document.getElementById('premiumModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('premiumModal').classList.add('hidden');
+        }
+    </script>
 
 
 </body>
