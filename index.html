@@ -7,6 +7,10 @@
     <title>Jhund - The Ultimate Creative Industry App</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #0F172A;
             color: #E2E8F0;
@@ -69,6 +73,7 @@
             </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
+                    <li><a href="/about.html" class="text-gray-900 hover:text-black">About us</a></li>
                     <li><a href="#features" class="text-gray-900 hover:text-black">Features</a></li>
                     <li><a href="#testimonials" class="text-gray-900 hover:text-black">Testimonials</a></li>
                     <li><a href="#pricing" class="text-gray-900 hover:text-black">Pricing</a></li>
@@ -500,8 +505,14 @@
         </div>
 
         <!-- Bottom Strip -->
-        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-            &copy; 2025 Thejhund. All rights reserved.
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400 space-y-2">
+            <div>
+                &copy; 2025 Thejhund. All rights reserved.
+            </div>
+            <div class="space-x-4">
+                <a href="privacy-policy.html" class="hover:text-white underline transition">Privacy Policy</a>
+                <a href="terms-and-conditions.html" class="hover:text-white underline transition">Terms & Conditions</a>
+            </div>
         </div>
     </footer>
 
