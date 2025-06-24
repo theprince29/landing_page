@@ -59,6 +59,16 @@
             border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        #jhundImage {
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        #videoModal iframe {
+            width: 100%;
+            height: 400px;
+            
+        }
     </style>
 </head>
 
@@ -95,7 +105,7 @@
 
             <!-- Left: App Preview -->
             <div class="md:w-1/2">
-                <img id="jhundImage" src="images/placeholder.png" alt="Jhund App Preview"
+                <img id="jhundImage" src="images/new/38744929 (3)-left.png" alt="Jhund App Preview"
                     class=" w-full max-w-md mx-auto md:mx-0 transform scale-x-[-1] transition-opacity duration-400 opacity-100" />
 
             </div>
@@ -147,10 +157,10 @@
 
 
 
-                <a href="#learn-more"
+                <a href="javascript:void(0);" onclick="openVideoModal()"
                     class="inline-flex items-center justify-center border border-purple-400 text-purple-300 hover:bg-purple-900 hover:bg-opacity-20 transition font-semibold px-6 py-3 rounded-lg text-sm">
-                    <svg class="h-5 w-5 mr-2" fill="currentColor">
-                        <path d="..." />
+                    <svg class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M4.5 3.5v13l11-6.5-11-6.5z" />
                     </svg>
                     Watch How It Works
                 </a>
@@ -289,7 +299,8 @@
                         </div>
                     </div>
                     <p class="text-gray-300">
-                        "The Jhund app has made talent searching extremely convenient and easy. In just one day I met the perfect artist that fit my role and I could complete my creative project within 15 days."
+                        "The Jhund app has made talent searching extremely convenient and easy. In just one day I met
+                        the perfect artist that fit my role and I could complete my creative project within 15 days."
                     </p>
                     <div class="mt-4 flex">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-500" viewBox="0 0 20 20"
@@ -328,7 +339,9 @@
                         </div>
                     </div>
                     <p class="text-gray-300">
-                        “The Jhund app connected me with talented dancers and videographers in just a few days. We formed a group, shot a full routine, and even sold our workshop passes—all within a very short span. It is the goto talent hub a creative like me needs!”
+                        “The Jhund app connected me with talented dancers and videographers in just a few days. We
+                        formed a group, shot a full routine, and even sold our workshop passes—all within a very short
+                        span. It is the goto talent hub a creative like me needs!”
                     </p>
                     <div class="mt-4 flex">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-500" viewBox="0 0 20 20"
@@ -365,56 +378,87 @@
         <div class="container mx-auto text-center max-w-4xl">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-12">Pricing Plans</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+
                 <!-- Free Plan -->
                 <div
-                    class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Free Plan</h3>
-                    <p class="text-lg mb-4 text-gray-300">Perfect for solo artist or hobbyists starting out.</p>
-                    <span class="block text-3xl font-bold mb-6">₹0<span
-                            class="text-base font-medium">/month</span></span>
-                    <ul class="text-left text-gray-400 space-y-3 mb-6">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none"
-                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Free talent search</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none"
-                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Free listing upto 5 product in marketpalce</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none"
-                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Free group formation</li>
-                    </ul>
-                    <button class="btn-primary text-white px-6 py-3 rounded-full transition">Get Started</button>
+                    class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3">Free Plan</h3>
+                        <p class="text-lg mb-4 text-gray-300">Perfect for solo artist or hobbyists starting out.</p>
+                        <span class="block text-3xl font-bold mb-6">₹0<span
+                                class="text-base font-medium">/month</span></span>
+                        <ul class="text-left text-gray-400 space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Free talent search
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Free listing up to 5 products in marketplace
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Free group formation
+                            </li>
+                        </ul>
+                    </div>
+                    <button
+                        class="btn-primary text-white px-6 py-3 rounded-full transition bg-purple-600 hover:bg-purple-500">Get
+                        Started</button>
                 </div>
 
                 <!-- Premium Plan -->
                 <div
-                    class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300">
-                    <h3 class="text-2xl font-bold mb-3">Premium Plan</h3>
-                    <p class="text-lg mb-4 text-gray-300">Complete access for professional and bussinesses</p>
-                    <span class="block text-3xl font-bold mb-6">₹99<span
-                            class="text-base font-medium">/month</span></span>
-                    <ul class="text-left text-gray-400 space-y-3 mb-6">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none"
-                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Unlimited Product Listing</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none"
-                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>24 / 7 customer support </li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none"
-                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>access to marketing tool pay as you go</li>
-
-                    </ul>
+                    class="pricing-card bg-gray-800 p-8 rounded-3xl shadow-xl transform hover:scale-105 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3">Premium Plan</h3>
+                        <p class="text-lg mb-4 text-gray-300">Complete access for professionals and businesses</p>
+                        <span class="block text-3xl font-bold mb-6">₹99<span
+                                class="text-base font-medium">/month</span></span>
+                        <ul class="text-left text-gray-400 space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Unlimited Product Listing
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> 24 / 7 customer support
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Access to marketing tool (pay as you go)
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Priority listing in search results
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg> Exclusive access to premium events
+                            </li>
+                        </ul>
+                    </div>
                     <button onclick="openModal()"
-                        class="btn-primary text-white px-6 py-3 rounded-full hover:bg-purple-400 transition">Get
+                        class="btn-primary text-white px-6 py-3 rounded-full transition bg-purple-600 hover:bg-purple-500">Get
                         Started</button>
                 </div>
+
             </div>
         </div>
     </section>
@@ -439,6 +483,21 @@
             </form>
         </div>
     </div>
+
+
+    <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+        <div class="relative bg-black rounded-lg overflow-hidden w-full max-w-2xl">
+            <button onclick="closeVideoModal()" class="absolute top-2 right-2 text-white text-2xl">&times;</button>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+                    class="w-full h-full"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <footer class="bg-gray-900 bg-opacity-80 text-white py-10 px-6 mt-10 rounded-t-3xl shadow-inner">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo and Description -->
@@ -579,28 +638,31 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Image slider logic
             const images = [
-                "images/placeholder.png",
-                "images/loading-left.png",
-                "images/placeholder-grp-incliend.png",
-                "images/marketplace-left.png",
-                "images/inbox-left.png"
+                "images/new/38744929 (3)-left.png",
+                "images/new/Screenshot_20250608-135648.Jhund-left.png",
+                "images/new/Screenshot_20250608-135139.Jhund-left.png",
+                "images/new/Screenshot_20250608-135150.Jhund-left.png",
+                "images/new/Screenshot_20250608-135159.Jhund-left.png",
+                "images/new/Screenshot_20250608-135627.Jhund-left.png",
+                "images/new/Screenshot_20250608-135645.Jhund-left.png",
+                "images/new/Screenshot_20250608-140101.Jhund-left.png",
             ];
 
             let current = 0;
             const imageElement = document.getElementById("jhundImage");
 
+            // Ensure image starts visible
+            imageElement.classList.add("opacity-100");
+
             setInterval(() => {
-                imageElement.classList.remove("opacity-100");
-                imageElement.classList.add("opacity-0");
+                imageElement.classList.replace("opacity-100", "opacity-0");
 
                 setTimeout(() => {
                     current = (current + 1) % images.length;
                     imageElement.src = images[current];
-                    imageElement.classList.remove("opacity-0");
-                    imageElement.classList.add("opacity-100");
-                }, 400);
+                    imageElement.classList.replace("opacity-0", "opacity-100");
+                }, 400); // Match transition duration
             }, 3000);
 
             // Modal form submit
@@ -621,6 +683,22 @@
         function closeModal() {
             document.getElementById('premiumModal').classList.add('hidden');
         }
+
+        function openVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalVideo');
+            iframe.src = "https://drive.google.com/file/d/1XYeB1mquk2cbpyPis1ygiM9eSIV5aQQ5/preview";
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('modalVideo');
+            iframe.src = "";
+            modal.classList.add('hidden');
+        }
+
+
     </script>
 
 
