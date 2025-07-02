@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - JHUND</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhund - The Ultimate Creative Industry App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #0F172A;
             color: #E2E8F0;
@@ -20,30 +25,70 @@
             color: transparent;
         }
 
+        .gradient-bg {
+            background: linear-gradient(135deg, #312E81 0%, #1E1B4B 100%);
+        }
+
         .card {
             background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
+
+        .feature-icon {
+            background: linear-gradient(45deg, #8B5CF6, #EC4899);
+            border-radius: 12px;
+            padding: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #8B5CF6, #EC4899);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .app-screenshot {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #jhundImage {
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        #videoModal iframe {
+            width: 100%;
+            height: 400px;
+
+        }
     </style>
 </head>
 
-<body class="min-h-screen">
-    <!-- Header/Navigation -->
+<body class="min-h-screen flex flex-col">
     <header class="py-2 px-6 mmd:px-12 bg-white" style="background: linear-gradient(45deg, #8B5CF6, #EC4899);">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="bg-white rounded-full p-2 inline-flex items-center justify-center">
-                    <img src="images/logo__.png" alt="logo_jund" class="h-10 w-10">
+            <a href="/">
+                <div class="flex items-center">
+                    <div class="bg-white rounded-full p-2 inline-flex items-center justify-center">
+                        <img src="images/logo__.png" alt="logo_jund" class="h-10 w-10">
+                    </div>
+                    <h1 class="ml-2 text-2xl font-bold text-gary-50">Jhund</h1>
                 </div>
-                <h1 class="ml-2 text-2xl font-bold text-gary-50">Jhund</h1>
-            </div>
+            </a>
             <nav class="hidden md:block">
                 <ul class="flex space-x-8">
-                    <li><a href="/" class="text-gray-900 hover:text-black">Home</a></li>
-                    <li><a href="/#features" class="text-gray-900 hover:text-black">Features</a></li>
-                    <li><a href="/#testimonials" class="text-gray-900 hover:text-black">Testimonials</a></li>
-                    <li><a href="/#pricing" class="text-gray-900 hover:text-black">Pricing</a></li>
+                    <li><a href="/about.html" class="text-gray-900 hover:text-black">About us</a></li>
+                    <li><a href="#features" class="text-gray-900 hover:text-black">Features</a></li>
+                    <li><a href="#testimonials" class="text-gray-900 hover:text-black">Testimonials</a></li>
+                    <li><a href="#pricing" class="text-gray-900 hover:text-black">Pricing</a></li>
                 </ul>
             </nav>
             <button class="block md:hidden text-white">
@@ -54,70 +99,62 @@
             </button>
         </div>
     </header>
-
-    <!-- About Section -->
-    <section class="py-20 px-6 md:px-12">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-6 gradient-text">About Us</h2>
-            <p class="text-lg text-gray-300 leading-relaxed">
-                <strong>JHUND</strong> is a talent discovery app for creative projects. You can search for talent
-                profiles
-                directly on Instagram using prompts in the <strong>JHUND APP</strong>. Once you find suitable profiles,
-                invite
-                them to collaborate by forming <strong>JHUNDs</strong> (project groups) where you can chat and manage
-                the
-                project.
-                <br /><br />
-                Our <strong>MARKETPLACE</strong> enables creators to post listings related to the creative industry.
-                Interested
-                leads can connect directly with the sellers. Whether you're a musician, designer, filmmaker, or dancer —
-                JHUND
-                helps unite and empower creators to collaborate effortlessly.
+    <!-- Main Content -->
+    <main class="flex-grow py-16 px-6 md:px-12 lg:px-24">
+        <div class="max-w-4xl mx-auto bg-gray-800 bg-opacity-40 p-8 rounded-xl shadow-lg card">
+            <h1 class="text-3xl md:text-4xl font-bold gradient-text mb-6">Child Safety Standards</h1>
+            <p class="mb-4">
+                At <strong>The Jhund</strong>, we are committed to ensuring the safety and protection of minors on our
+                platform. We do not tolerate any form of child sexual abuse material (CSAM) or exploitation and comply
+                with
+                all applicable laws and regulations.
             </p>
+
+            <h2 class="text-2xl font-semibold text-purple-400 mt-6 mb-2">Prohibited Content</h2>
+            <ul class="list-disc list-inside space-y-1 text-sm md:text-base text-gray-300">
+                <li>Child sexual abuse material (CSAM)</li>
+                <li>Sexualization or exploitation of minors in any form</li>
+                <li>Solicitation, grooming, or predatory behavior targeting minors</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-purple-400 mt-6 mb-2">Reporting and Moderation</h2>
+            <p class="mb-4">
+                Users can report suspicious or harmful behavior directly within the app or via email. We review all
+                reports
+                promptly and take appropriate action, including banning offending accounts and cooperating with law
+                enforcement.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-purple-400 mt-6 mb-2">Contact</h2>
+            <p class="mb-4">
+                For any concerns related to child safety or to report violations, please contact our dedicated safety
+                team
+                at:
+                <strong><a href="mailto:support@thejhund.com"
+                        class="underline text-pink-400 hover:text-pink-300">support@thejhund.com</a></strong>
+            </p>
+
+            <h2 class="text-2xl font-semibold text-purple-400 mt-6 mb-2">Compliance and Best Practices</h2>
+            <p class="mb-4">
+                Our moderation team is trained on CSAE detection and response protocols. We actively monitor
+                user-generated
+                content and leverage both automated tools and manual review to ensure compliance with child safety
+                regulations.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-purple-400 mt-6 mb-2">External Resources</h2>
+            <p class="mb-4">
+                We cooperate with law enforcement and report CSAM to the National Center for Missing & Exploited
+                Children
+                (NCMEC) and relevant authorities as required.
+            </p>
+
+            <p class="text-sm text-gray-400 mt-6"><em>Last updated: July 2, 2025</em></p>
         </div>
-    </section>
-
-    <!-- FAQs Section -->
-    <section id="faqs" class="py-20 px-6 md:px-12 bg-gray-800">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-extrabold mb-10 text-white">Frequently Asked Questions</h2>
-
-            <div class="space-y-8 text-gray-200">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">1. How does it work?</h3>
-                    <p class="text-gray-400">Ans: <a href="https://drive.google.com/file/d/1XYeB1mquk2cbpyPis1ygiM9eSIV5aQQ5/view" class="text-purple-400 underline">Video demo</a></p>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">2. How can I contact your customer service representatives?
-                    </h3>
-                    <p class="text-gray-400">
-                        Ans: Mobile/WhatsApp: <a href="tel:+917896923233" class="text-blue-400">+91-7896923233</a><br />
-                        Email: <a href="mailto:support@thejhund.com" class="text-blue-400">support@thejhund.com</a>
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">3. Is it safe to use?</h3>
-                    <p class="text-gray-400">Ans: Absolutely, 100%.</p>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">4. What is a JHUND?</h3>
-                    <p class="text-gray-400">
-                        Ans: Project groups are called <strong>JHUNDs</strong> on the JHUND APP and the group members
-                        are called
-                        <strong>JHUNDMATEs</strong>. The term "JHUND" comes from Hindi and means a flock of similar
-                        species —
-                        symbolizing unity, harmony, and strength.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-     <footer class="bg-gray-900 bg-opacity-80 text-white py-10 px-6 mt-10 rounded-t-3xl shadow-inner">
+    <footer class="bg-gray-900 bg-opacity-80 text-white py-10 px-6 mt-10 rounded-t-3xl shadow-inner">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo and Description -->
             <div>
@@ -207,7 +244,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
